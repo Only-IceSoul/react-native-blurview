@@ -1,7 +1,5 @@
-// main index.js
+import { requireNativeComponent } from 'react-native';
 
-import { NativeModules } from 'react-native';
 
-const { ReactNativeBlurview } = NativeModules;
-
-export default ReactNativeBlurview;
+export const BlurRootView = requireNativeComponent('JJSBlurRootView',null)
+export const BlurView = requireNativeComponent('JJSBlurView',null)

@@ -1,13 +1,14 @@
 {
-  "name": "react-native-blur-view",
+  "name": "react-native-realtimeblurview",
   "title": "React Native BlurView",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Real Time Blur",
   "main": "index.js",
   "files": [
     "README.md",
     "android",
     "index.js",
+    "index.d.ts",
     "ios",
     "react-native-blurview.podspec"
   ],
