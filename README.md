@@ -30,20 +30,36 @@ import {BlurView , BlurRootView } from 'react-native-realtimeblurview';
     <View style={{backgroundColor:'red'}}>
    
 
-  
-   <BlurView  
-     blurNode="myNode" 
+   <View>
+      <BlurView  
+        blurNode="myNode" 
 
-   />
+      />
+      <OverlayView style={{backgroundColor:'myColor'}} />
+   </View>
 
 </BlurRootView>
 
 ```
 
-BlurView:  
- If your RootView has a lot of transparent set a backgroundColor (ios ignored Blurview)   
+### Overlay Colors
+
+<br>
+
+| Name | rgb | a |
+| --- | ---| --- |
+| dark | 0.11 | 0.73 |
+| light | 1 | 0.3 |
+| extraLight | 0.91 | 0.8 |
+
+<br> 
 
 ### BlurView Props:  
+
+<br>
+
+BlurView:  
+ If your RootView has a lot of transparent set a backgroundColor (ios ignored)   
 
 | Name | description | type | default |
 | --- | --- | --- | --- |
