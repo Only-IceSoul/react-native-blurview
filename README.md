@@ -30,13 +30,15 @@ import {BlurView , BlurRootView } from 'react-native-realtimeblurview';
     <View style={{backgroundColor:'red'}}>
    
 
-   <View>
+ 
       <BlurView  
         blurNode="myNode" 
 
-      />
-      <OverlayView style={{backgroundColor:'myColor'}} />
-   </View>
+      >
+          <OverlayView style={{backgroundColor:'myColor'}} />
+      </BlurView>
+      
+
 
 </BlurRootView>
 

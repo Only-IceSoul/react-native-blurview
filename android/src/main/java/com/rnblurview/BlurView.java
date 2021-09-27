@@ -24,7 +24,7 @@ public class BlurView extends ViewGroup {
 
     RenderScript mRs ;
     Bitmap mBitmapBlur;
-    Canvas mCanvas = new Canvas();
+    CanvasBlur mCanvas = new CanvasBlur();
     boolean mIsBlur = false;
     float mRadius = DEFAULT_BLUR_RADIUS;
     BlurRootView mRootView;
@@ -86,11 +86,15 @@ public class BlurView extends ViewGroup {
         if(!mIsBlur) {
             canvas.drawColor(mBgColor);
             drawBlur(canvas);
+            super.dispatchDraw(canvas);
+        }else{
+           mCanvas.setEnabled(false);
         }
     }
     private void updateBlur(){
         if(mRootView != null && mBitmapBlur != null) {
             mBitmapBlur.eraseColor(Color.TRANSPARENT);
+            mCanvas.setEnabled(true);
             drawNode();
             if(mRadius > 0f){   blur();   }
 
