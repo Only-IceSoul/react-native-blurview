@@ -86,6 +86,7 @@ public class BlurView extends ViewGroup {
         if(!mIsBlur) {
             canvas.drawColor(mBgColor);
             drawBlur(canvas);
+            super.dispatchDraw(canvas);
         }
     }
     private void updateBlur(){
