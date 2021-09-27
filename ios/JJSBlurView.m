@@ -16,6 +16,6 @@
 RCT_EXTERN_MODULE(JJSBlurView,RCTViewManager)
 
 RCT_EXPORT_VIEW_PROPERTY(blurNode, NSString)
-
+RCT_EXPORT_VIEW_PROPERTY(radius, NSNumber)
 
 @end

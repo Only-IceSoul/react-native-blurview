@@ -11,7 +11,7 @@ import UIKit
 
 
 @objc(BlurRootView)
-class BlurRootView: UIView {
+class BlurRootView: RCTView {
     
     
     init() {

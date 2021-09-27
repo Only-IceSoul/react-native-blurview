@@ -7,6 +7,7 @@ interface BlurRootProps extends ViewProps {
 
 interface BlurProps extends ViewProps {
     blurNode?:string
+    radius?:number
 }
 
 declare class BlurRootComponent extends React.Component<BlurRootProps> {}

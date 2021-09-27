@@ -1,7 +1,7 @@
 {
   "name": "react-native-realtimeblurview",
-  "title": "React Native BlurView",
-  "version": "0.0.3",
+  "title": "React Native Real Time Blur",
+  "version": "0.0.4",
   "description": "Real Time Blur",
   "main": "index.js",
   "files": [

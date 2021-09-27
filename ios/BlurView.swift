@@ -19,18 +19,36 @@ class BlurView: UIView {
 
     init() {
         super.init(frame: .zero)
-        mBlurEffect.blurRadius = 24
+        mBlurEffect.blurRadius = 10
         mBlurEffect.overlayView?.removeFromSuperview()
         addSubview(mBlurEffect)
     }
 
-   
+    override var bounds: CGRect{
+        didSet{
+            mBlurEffect.frame = bounds
+        }
+    }
  
+    
+    override var backgroundColor: UIColor?{
+        set{
+            super.backgroundColor = nil
+        }
+        get{
+            super.backgroundColor
+        }
+    }
   
     @objc func setBlurNode(_ v:NSString?){
     }
    
     
+      @objc func setRadius(_ v:NSNumber?){
+        let ev = v == nil ? 10 : CGFloat(truncating: v!)
+        mBlurEffect.blurRadius = ev
+      }
+     
    
 
    
