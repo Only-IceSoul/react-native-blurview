@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D0533504270149C100C35166 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0533503270149C100C35166 /* BlurView.swift */; };
+		D053350B270149DB00C35166 /* JJSBlurRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0533506270149DB00C35166 /* JJSBlurRootView.m */; };
+		D053350C270149DB00C35166 /* BlurRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0533507270149DB00C35166 /* BlurRootView.swift */; };
+		D053350D270149DB00C35166 /* JJSBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0533508270149DB00C35166 /* JJSBlurView.m */; };
+		D053350E270149DB00C35166 /* JJSBlurRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0533509270149DB00C35166 /* JJSBlurRootView.swift */; };
+		D053350F270149DB00C35166 /* JJSBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D053350A270149DB00C35166 /* JJSBlurView.swift */; };
+		D0533517270149E800C35166 /* UIViewEffectViewiOS14.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0533512270149E800C35166 /* UIViewEffectViewiOS14.swift */; };
+		D0533518270149E800C35166 /* JJBlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0533513270149E800C35166 /* JJBlurEffect.swift */; };
+		D0533519270149E800C35166 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0533514270149E800C35166 /* extension.swift */; };
+		D053351A270149E800C35166 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0533515270149E800C35166 /* VisualEffectView.swift */; };
+		D053351B270149E800C35166 /* CustomBlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0533516270149E800C35166 /* CustomBlurEffect.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		58B511D91A9E6C8500147676 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -20,6 +34,18 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libReactNativeBlurview.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libReactNativeBlurview.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0533502270149C000C35166 /* ReactNativeBlurview-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactNativeBlurview-Bridging-Header.h"; sourceTree = "<group>"; };
+		D0533503270149C100C35166 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		D0533506270149DB00C35166 /* JJSBlurRootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSBlurRootView.m; sourceTree = "<group>"; };
+		D0533507270149DB00C35166 /* BlurRootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurRootView.swift; sourceTree = "<group>"; };
+		D0533508270149DB00C35166 /* JJSBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSBlurView.m; sourceTree = "<group>"; };
+		D0533509270149DB00C35166 /* JJSBlurRootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJSBlurRootView.swift; sourceTree = "<group>"; };
+		D053350A270149DB00C35166 /* JJSBlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJSBlurView.swift; sourceTree = "<group>"; };
+		D0533512270149E800C35166 /* UIViewEffectViewiOS14.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewEffectViewiOS14.swift; sourceTree = "<group>"; };
+		D0533513270149E800C35166 /* JJBlurEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJBlurEffect.swift; sourceTree = "<group>"; };
+		D0533514270149E800C35166 /* extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		D0533515270149E800C35166 /* VisualEffectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
+		D0533516270149E800C35166 /* CustomBlurEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBlurEffect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,8 +70,28 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				D0533511270149E800C35166 /* blurUtils */,
+				D0533503270149C100C35166 /* BlurView.swift */,
+				D0533507270149DB00C35166 /* BlurRootView.swift */,
+				D0533506270149DB00C35166 /* JJSBlurRootView.m */,
+				D0533509270149DB00C35166 /* JJSBlurRootView.swift */,
+				D0533508270149DB00C35166 /* JJSBlurView.m */,
+				D053350A270149DB00C35166 /* JJSBlurView.swift */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				D0533502270149C000C35166 /* ReactNativeBlurview-Bridging-Header.h */,
 			);
+			sourceTree = "<group>";
+		};
+		D0533511270149E800C35166 /* blurUtils */ = {
+			isa = PBXGroup;
+			children = (
+				D0533512270149E800C35166 /* UIViewEffectViewiOS14.swift */,
+				D0533513270149E800C35166 /* JJBlurEffect.swift */,
+				D0533514270149E800C35166 /* extension.swift */,
+				D0533515270149E800C35166 /* VisualEffectView.swift */,
+				D0533516270149E800C35166 /* CustomBlurEffect.swift */,
+			);
+			path = blurUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -79,6 +125,7 @@
 				TargetAttributes = {
 					58B511DA1A9E6C8500147676 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 1220;
 					};
 				};
 			};
@@ -105,6 +152,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0533504270149C100C35166 /* BlurView.swift in Sources */,
+				D053350F270149DB00C35166 /* JJSBlurView.swift in Sources */,
+				D053350B270149DB00C35166 /* JJSBlurRootView.m in Sources */,
+				D0533519270149E800C35166 /* extension.swift in Sources */,
+				D0533518270149E800C35166 /* JJBlurEffect.swift in Sources */,
+				D053351A270149E800C35166 /* VisualEffectView.swift in Sources */,
+				D053350C270149DB00C35166 /* BlurRootView.swift in Sources */,
+				D0533517270149E800C35166 /* UIViewEffectViewiOS14.swift in Sources */,
+				D053350E270149DB00C35166 /* JJSBlurRootView.swift in Sources */,
+				D053350D270149DB00C35166 /* JJSBlurView.m in Sources */,
+				D053351B270149E800C35166 /* CustomBlurEffect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,32 +283,41 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ReactNativeBlurview;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactNativeBlurview-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ReactNativeBlurview;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactNativeBlurview-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
