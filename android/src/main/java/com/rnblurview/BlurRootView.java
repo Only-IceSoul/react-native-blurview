@@ -21,7 +21,6 @@ public class BlurRootView extends ViewGroup {
         }
     }
     
-
     public void setupBlurNode(){
         if(!oldName.isEmpty()){
             BlurRootViewManager.BlurNodes.remove(oldName);

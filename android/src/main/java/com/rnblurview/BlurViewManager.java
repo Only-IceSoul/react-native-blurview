@@ -27,6 +27,11 @@ public class BlurViewManager extends ViewGroupManager<BlurView> {
         view.setBlurNode(v == null ? "" : v);
     }
 
+    @ReactProp(name = "radius",defaultFloat = 10f)
+    public void setRadius(BlurView view, float v){
+        view.setRadius(v);
+    }
+
 
     @Override
     @ReactProp(

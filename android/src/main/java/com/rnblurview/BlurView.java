@@ -20,7 +20,7 @@ import java.util.Objects;
 
 public class BlurView extends ViewGroup {
     static float DEFAULT_SCALE_FACTOR = 8f;
-    static float DEFAULT_BLUR_RADIUS = 24f;
+    static float DEFAULT_BLUR_RADIUS = 10f;
 
     RenderScript mRs ;
     Bitmap mBitmapBlur;
@@ -33,7 +33,6 @@ public class BlurView extends ViewGroup {
     private final SizeScaler mSizeScaler = new SizeScaler(DEFAULT_SCALE_FACTOR);
     private final Paint mPaint = new Paint(Paint.FILTER_BITMAP_FLAG);
     private Allocation mOutAllocation;
-    private Allocation mIntAllocation;
     private final ScriptIntrinsicBlur mScript;
     private int mBgColor = Color.TRANSPARENT;
 
@@ -51,7 +50,13 @@ public class BlurView extends ViewGroup {
         mScript = ScriptIntrinsicBlur.create(mRs, Element.U8_4(mRs));
         actionOnLayout();
     }
-
+    public void setRadius(float v){
+        if(mRadius != v){
+            mRadius = v > 25f ? 25f : Math.max(v, 0f);
+            updateBlur();
+            invalidate();
+        }
+    }
     private void actionOnLayout(){
         addOnLayoutChangeListener(new OnLayoutChangeListener() {
             @Override
@@ -87,7 +92,8 @@ public class BlurView extends ViewGroup {
         if(mRootView != null && mBitmapBlur != null) {
             mBitmapBlur.eraseColor(Color.TRANSPARENT);
             drawNode();
-            blur();
+            if(mRadius > 0f){   blur();   }
+
         }
     }
     private void drawBlur(Canvas canvas){
@@ -118,21 +124,16 @@ public class BlurView extends ViewGroup {
 
     private boolean mCreateNewAllocation = false;
     private void blur(){
-//        Allocation input = Allocation.createFromBitmap(mRs, mBitmapBlur);
+        Allocation input = Allocation.createFromBitmap(mRs, mBitmapBlur);
         if(mCreateNewAllocation){
-            mIntAllocation = Allocation.createFromBitmap(mRs, mBitmapBlur);
-            if(mOutAllocation != null) mIntAllocation.destroy();
             if(mOutAllocation != null) mOutAllocation.destroy();
-            mOutAllocation = Allocation.createTyped(mRs, mIntAllocation.getType());
+            mOutAllocation = Allocation.createTyped(mRs, input.getType());
             mCreateNewAllocation = false;
         }
-        else{
-            mIntAllocation.copyFrom(mBitmapBlur);
-        }
         mScript.setRadius(mRadius);
-        mScript.setInput(mIntAllocation);
+        mScript.setInput(input);
         mScript.forEach(mOutAllocation);
-//        input.destroy();
+        input.destroy();
         mOutAllocation.copyTo(mBitmapBlur);
     }
 
@@ -175,6 +176,7 @@ public class BlurView extends ViewGroup {
 
    public void setBgColor(int v){
         mBgColor = v;
+        invalidate();
    }
 
     private String mBlurNode = "";
