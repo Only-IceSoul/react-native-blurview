@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { StyleSheet } from 'react-native'
 
 
@@ -6,12 +6,28 @@ import { StyleSheet } from 'react-native'
 
 const BlurView = (props)=>{
 
- 
+     
     const {blurNode,radius,style,className,...others} = props
-
      const r = radius === undefined ? 10 : radius
+   
+     const styleObject = useMemo(()=>{
+       if (typeof style === 'number') return StyleSheet.flatten(style) 
+       if(Array.isArray(style)){
+          var styleJs = {}
+          style.forEach((v)=>{
+            if(typeof v === 'number'){
+               let ss = StyleSheet.flatten(style) 
+               Object.assign(styleJs,ss)
+            }else{
+              Object.assign(styleJs,v)
+            }
+          })
 
-     const styleObject = typeof style === 'number' ? StyleSheet.flatten(style) : style
+          return styleJs
+       }
+       return style
+     },[style])
+     
      const styleString = 
      `
            
