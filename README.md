@@ -2,6 +2,7 @@
 
 android: api 21+   
 ios : 10.0+   
+web: [backdrop](https://caniuse.com/?search=backdrop)
 
 <img src="./src/demo.jpg" width="300">
 
