@@ -84,15 +84,17 @@ public class BlurView extends ViewGroup {
     @Override
     public void dispatchDraw(Canvas canvas) {
         if(!mIsBlur) {
-            canvas.drawColor(mBgColor);
-            drawBlur(canvas);
-            super.dispatchDraw(canvas);
+            if(getWidth() > 0 && getHeight() > 0){
+                canvas.drawColor(mBgColor);
+                drawBlur(canvas);
+                super.dispatchDraw(canvas);
+            }
         }else{
            mCanvas.setEnabled(false);
         }
     }
     private void updateBlur(){
-        if(mRootView != null && mBitmapBlur != null) {
+        if(mRootView != null && mBitmapBlur != null && getWidth() > 0 && getHeight() > 0) {
             mBitmapBlur.eraseColor(Color.TRANSPARENT);
             mCanvas.setEnabled(true);
             drawNode();
@@ -159,14 +161,18 @@ public class BlurView extends ViewGroup {
     private void setupBitmap(int w, int h){
         SizeScaler.Size bitmapSize = mSizeScaler.scale(w, h);
         mScaleFactor = bitmapSize.scaleFactor;
-        if(mBitmapBlur == null ) {
-            mBitmapBlur = Bitmap.createBitmap(bitmapSize.width, bitmapSize.height, Bitmap.Config.ARGB_8888);
-            mCanvas.setBitmap(mBitmapBlur);
-            mCreateNewAllocation = true;
+        if(mBitmapBlur == null  ) {
+            if(w > 0 && h > 0) {
+                mBitmapBlur = Bitmap.createBitmap(bitmapSize.width, bitmapSize.height, Bitmap.Config.ARGB_8888);
+                mCanvas.setBitmap(mBitmapBlur);
+                mCreateNewAllocation = true;
+            }
         }else if(bitmapSize.width != mBitmapBlur.getWidth() || bitmapSize.height != mBitmapBlur.getHeight()){
-            mBitmapBlur = Bitmap.createBitmap(bitmapSize.width, bitmapSize.height, Bitmap.Config.ARGB_8888);
-            mCanvas.setBitmap(mBitmapBlur);
-            mCreateNewAllocation = true;
+            if(w > 0 && h > 0) {
+                mBitmapBlur = Bitmap.createBitmap(bitmapSize.width, bitmapSize.height, Bitmap.Config.ARGB_8888);
+                mCanvas.setBitmap(mBitmapBlur);
+                mCreateNewAllocation = true;
+            }
         }
     }
 
