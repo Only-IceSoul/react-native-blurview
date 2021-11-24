@@ -4,6 +4,8 @@ android: api 21+
 ios : 10.0+   
 web: [backdrop](https://caniuse.com/?search=backdrop)
 
+ Example -> [Demo](https://github.com/Only-IceSoul/canal/tree/master/react-native/Car%20Insurance%20Claim)  
+
 <img src="./src/demo.jpg" width="300">
 
 ## Getting started
